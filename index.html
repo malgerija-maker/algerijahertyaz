@@ -576,10 +576,14 @@ window.onclick = function(e) {
 <h2>1.Tanpa Generic</h2>
 <ul>
   <li>
-​Generic adalah istilah untuk sesuatu yang bersifat umum,
-tidak khusus, dan dapat digunakan dalam banyak situasi. Kata ini sering dipakai dalam berbagai bidang seperti bahasa, 
-teknologi, obat-obatan, dan pemrograman. Sesuatu yang generic biasanya tidak memiliki ciri yang spesifik atau unik.
-Contohnya, kalimat “Semangat terus” disebut generic karena bisa ditujukan kepada siapa saja
+​Generic adalah istilah yang digunakan untuk menyatakan sesuatu yang bersifat umum, 
+tidak spesifik, dan dapat digunakan dalam berbagai situasi atau kebutuhan. 
+Istilah ini sering digunakan dalam berbagai bidang, seperti bahasa, teknologi, obat-obatan, dan pemrograman. 
+Dalam kehidupan sehari-hari, sesuatu yang generic berarti tidak memiliki ciri khusus atau hanya bersifat umum saja.
+
+Dalam dunia pemrograman, generic digunakan agar suatu kode dapat dipakai untuk berbagai tipe data tanpa harus membuat kode
+yang berbeda-beda. Dengan adanya generic, program menjadi lebih fleksibel, efisien, dan mudah digunakan kembali.
+Oleh karena itu, generic sangat membantu dalam membuat program yang lebih sederhana dan terstruktur.
 </ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
@@ -616,8 +620,835 @@ void main() {
            LIHAT CODE
         </button>
     </div>
-    
+
     <img id="img1" class="vscode-image" src="vscode1.png" alt="Tampilan VS Code" style="display:none;" 
          onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode1.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
 
+  
+<!-- 2 -->
+<div class="section">
+<h2>2.Dengan Generic</h2>
+    <ul>
+    <li>
+    Pada fungsi <b>main()</b>, dibuat dua objek yaitu 
+    <b>Box&lt;int&gt;</b> dan <b>Box&lt;String&gt;</b> untuk menyimpan 
+    data dengan tipe yang berbeda.
+  </li>
+
+  <li>
+    Program kemudian menampilkan isi dari masing-masing objek menggunakan 
+    <b>print()</b>, sehingga terlihat bahwa setiap Box menyimpan data 
+    sesuai dengan tipe yang telah ditentukan.
+  </li>
+</ul>
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+
+class Box<T> {
+  T data;
+
+  Box(this.data);
+}
+
+void main() {
+  // Data awal
+  var intBox = Box<int>(42);
+  var stringBox = Box<String>("Hello");
+
+  // Menampilkan data
+  print("Nilai int: ${intBox.data}");
+  print("Nilai string: ${stringBox.data}");
+
+  // Contoh keamanan (tidak bisa diubah tipe)
+  // intBox.data = "Hello"; // ❌ ERROR
+}
+</code></pre>
+
+  
+
+  
+<!-- MODAL -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <img id="modalImage" src="" alt="Preview Gambar">
+    </div>
+</div>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img2')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img2" class="vscode-image" src="vscode2.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode2.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+
+  
+<!-- 3 -->
+<div class="section">
+<h2>3.Sintaks Generic Class dan Function</h2>
+<ul>
+    <li>
+    Method <b>getData()</b> digunakan untuk mengambil nilai yang tersimpan 
+    di dalam class sesuai dengan tipe data yang telah ditentukan.
+  </li>
+
+  <li>
+    Selain itu, terdapat <b>generic function</b> yaitu <b>myFunc&lt;T&gt;</b> 
+    yang dapat menerima dan mengembalikan nilai dengan tipe yang sama, 
+    sehingga fungsi ini juga bersifat fleksibel terhadap berbagai tipe data.
+  </li>
+</ul>
+   <h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+class MyClass<T> {
+  T data;
+
+  MyClass(this.data);
+
+  T getData() {
+    return data;
+  }
+}
+
+// Generic function
+T myFunc<T>(T value) {
+  return value;
+}
+
+void main() {
+  var myInt = MyClass<int>(10);
+  var myString = MyClass<String>("test");
+
+  print(myInt.getData());
+  print(myString.getData());
+
+  var intValue = myFunc<int>(100);
+  var stringValue = myFunc<String>("hello");
+
+  print(intValue);
+  print(stringValue);
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img3')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img3" class="vscode-image" src="vscode3.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode3.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+
+    
+<!-- 4 -->
+<div class="section">
+<h2>4.kelas Box <T></h2>
+<ul>
+   <li>
+    Variabel <b>_value</b> bersifat private dan digunakan untuk menyimpan nilai, 
+    sedangkan <b>getter value</b> digunakan untuk mengambil nilai tersebut dari luar class.
+  </li>
+
+  <li>
+    Method <b>setValue()</b> digunakan untuk mengubah nilai yang ada di dalam 
+    objek <b>Box</b> sesuai dengan tipe data yang telah ditentukan.
+  </li>
+</ul>
+   <h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+class Box<T> {
+  T? _value;
+
+  Box(this._value);
+
+  T? get value => _value;
+
+  void setValue(T value) {
+    _value = value;
+  }
+}
+
+void main() {
+  var intBox = Box<int>(10);
+  print("Int Box: ${intBox.value}");
+
+  intBox.setValue(20);
+  print("Set Int: ${intBox.value}");
+
+  var stringBox = Box<String>("Hello");
+  print("String Box: ${stringBox.value}");
+
+  stringBox.setValue("World");
+  print("Set String: ${stringBox.value}");
+
+  var doubleBox = Box<double>(3.14);
+  print("Double Box: ${doubleBox.value}");
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img4')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img4" class="vscode-image" src="vscode4.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode4.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 5 -->
+<div class="section">
+<h2>5.Multiple Type Parameters</h2>
+<ul>
+  <li>
+    Pada fungsi <b>main()</b>, dibuat beberapa objek yaitu 
+    <b>Pair&lt;String, int&gt;</b>, <b>Pair&lt;String, String&gt;</b>, 
+    dan <b>Pair&lt;int, double&gt;</b> untuk menunjukkan bahwa class 
+    dapat digunakan dengan berbagai tipe data.
+</ul>
+   <h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+class Pair<K, V> {
+  K key;
+  V value;
+
+  Pair(this.key, this.value);
+
+  void printPair() {
+    print("Key: $key, Value: $value");
+  }
+}
+
+void main() {
+  var pair1 = Pair<String, int>("age", 30);
+  pair1.printPair();
+
+  var pair2 = Pair<String, String>("name", "Alice");
+  pair2.printPair();
+
+  var pair3 = Pair<int, double>(1, 2.71);
+  pair3.printPair();
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img5')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img5" class="vscode-image" src="vscode5.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode5.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 6 -->
+<div class="section">
+<h2>6.Penerapan Generic Menggabungkan Dua Tipe Data</h2>
+<ul>
+ <li>
+    Hasil dari fungsi kemudian ditampilkan menggunakan <b>print()</b>, 
+    sehingga terlihat bahwa fungsi dapat bekerja dengan berbagai kombinasi tipe data.
+  </li>
+
+  <li>
+    Dengan penggunaan generic function, program menjadi lebih fleksibel 
+    karena satu fungsi dapat digunakan untuk berbagai jenis tipe data tanpa 
+    harus membuat fungsi yang berbeda-beda.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+String combine<T, U>(T value1, U value2) {
+  return '$value1, $value2';
+}
+
+void main() {
+  var result1 = combine<String, int>('Number is', 10);
+  print(result1);
+
+  var result2 = combine<int, double>(10, 20.5);
+  print(result2);
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img6')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img6" class="vscode-image" src="vscode6.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode6.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 7 -->
+<div class="section">
+<h2>7.Generic Dengan Extends</h2>
+<ul>
+   <li>
+    Constructor <b>NumberBox(this.value)</b> digunakan untuk menginisialisasi 
+    nilai awal saat objek dibuat.
+  </li>
+
+  <li>
+    Method <b>getValue()</b> digunakan untuk mengambil dan mengembalikan 
+    nilai yang tersimpan di dalam objek.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+
+class NumberBox<T extends num> {
+  T value;
+
+  NumberBox(this.value);
+
+  T getValue() {
+    return value;
+  }
+}
+
+void main() {
+  var intBox = NumberBox<int>(10);
+  print("Int: ${intBox.getValue()}");
+
+  var doubleBox = NumberBox<double>(3.14);
+  print("Double: ${doubleBox.getValue()}");
+
+  // var stringBox = NumberBox<String>("test"); // ❌ Error
+}    
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img7')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img7" class="vscode-image" src="vscode7.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode7.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 8 -->
+<div class="section">
+<h2>8.Type Inference (Inferensi Tipe)</h2>
+<ul>
+   <li>
+    Tipe <b>&lt;T&gt;</b> membuat fungsi ini bersifat fleksibel karena dapat 
+    digunakan untuk berbagai jenis data seperti <b>int</b>, <b>String</b>, 
+    dan tipe data lainnya.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+T myFunc<T>(T value) {
+  return value;
+}
+
+void main() {
+  var intValue = myFunc(10); // otomatis int
+  print(intValue.runtimeType);
+
+  var stringValue = myFunc("test"); // otomatis String
+  print(stringValue.runtimeType);
+}    
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img8')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img8" class="vscode-image" src="vscode8.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode8.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+    <!-- 9 -->
+<div class="section">
+<h2>9.Pembatasan Tipe Pada Interface dan Class</h2>
+<ul>
+   <li>
+    Fungsi <b>printIterable()</b> akan melakukan perulangan menggunakan 
+    <b>for-in loop</b> untuk menampilkan setiap elemen yang ada di dalam 
+    koleksi data.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+void printIterable<T extends Iterable<dynamic>>(T iterable) {
+  for (var item in iterable) {
+    print(item);
+  }
+}
+
+void main() {
+  printIterable<List<int>>([1, 2, 3]);
+  printIterable<Set<String>>({'apple', 'banana'});
+
+  // printIterable<int>(10); // ❌ Error
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img9')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img9" class="vscode-image" src="vscode9.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode9.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+- 10 -->
+<div class="section">
+<h2>10.Pembatasan Tipe Dengan Class Abstract</h2>
+<ul>
+<li>
+    Class <b>AnimalCage&lt;T extends Animal&gt;</b> merupakan generic class 
+    yang hanya dapat menerima tipe data yang merupakan turunan dari 
+    <b>Animal</b>.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+abstract class Animal {
+  void makeSound();
+}
+
+class Dog implements Animal {
+  @override
+  void makeSound() {
+    print("Woof!");
+  }
+}
+
+class Cat implements Animal {
+  @override
+  void makeSound() {
+    print("Meow!");
+  }
+}
+
+class AnimalCage<T extends Animal> {
+  T animal;
+
+  AnimalCage(this.animal);
+
+  void sound() {
+    animal.makeSound();
+  }
+}
+
+void main() {
+  var dogCage = AnimalCage<Dog>(Dog());
+  dogCage.sound();
+
+  var catCage = AnimalCage<Cat>(Cat());
+  catCage.sound();
+
+  // var wrong = AnimalCage<String>("test"); // ❌ Error
+}
+</code></pre>
+ </div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img10')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img10" class="vscode-image" src="vscode10.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode10.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 11 -->
+<div class="section">
+<h2>11.Praktik Generic Class & Fungsi</h2>
+<ul>
+   <li>
+    Pada program ini, <b>Repository&lt;T&gt;</b> merupakan <i>generic class</i> 
+    yang digunakan untuk mengelola dan menyimpan data dalam bentuk list 
+    dengan tipe yang fleksibel.
+  </li>
+</ul>
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+// Repository Generic
+class Repository<T> {
+  List<T> _items = [];
+
+  void save(T item) {
+    _items.add(item);
+  }
+
+  T getById(int id) {
+    return _items[id];
+  }
+
+  List<T> getAll() {
+    return _items;
+  }
+}
+
+// Fungsi swap
+void swap<T>(List<T> list, int i, int j) {
+  var temp = list[i];
+  list[i] = list[j];
+  list[j] = temp;
+}
+
+// Class Triple
+class Triple<A, B, C> {
+  A first;
+  B second;
+  C third;
+
+  Triple(this.first, this.second, this.third);
+}
+
+void main() {
+  var repo = Repository<int>();
+  repo.save(10);
+  repo.save(20);
+
+  print(repo.getAll());
+
+  var list = [1, 2, 3];
+  swap(list, 0, 2);
+  print(list);
+
+  var triple = Triple<String, int, double>("Age", 21, 1.75);
+  print("${triple.first}, ${triple.second}, ${triple.third}");
+}    
+</code></pre>
+</div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img11')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img11" class="vscode-image" src="vscode11.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode11.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+    <!-- 12 -->
+<div class="section">
+<h2>12.Studi Kasus - cache Generic</h2>
+<ul>
+  <li>
+    Tipe <b>&lt;T&gt;</b> memungkinkan class <b>Cache</b> menyimpan berbagai jenis 
+    data seperti <b>String</b>, <b>int</b>, atau bahkan objek seperti <b>Product</b>.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+
+class Cache<T> {
+  final Map<String, T> _storage = {};
+
+  void set(String key, T value) {
+    _storage[key] = value;
+  }
+
+  T? get(String key) {
+    return _storage[key];
+  }
+
+  void remove(String key) {
+    _storage.remove(key);
+  }
+}
+
+// Tambahan agar bisa jalan
+class Product {
+  String name;
+  int price;
+
+  Product(this.name, this.price);
+
+  @override
+  String toString() {
+    return 'Product(name: $name, price: $price)';
+  }
+}
+
+void main() {
+  var userCache = Cache<String>();
+  userCache.set('name', 'Alice');
+
+  print(userCache.get('name'));
+
+  var productCache = Cache<Product>();
+  productCache.set('p1', Product('Laptop', 1000));
+
+  print(productCache.get('p1'));
+}    
+</code></pre>
+</div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img12')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img12" class="vscode-image" src="vscode12.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode12.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 13 -->
+<div class="section">
+<h2>13.Latihan</h2>
+<ul>
+<li>
+    Method <b>push()</b> digunakan untuk menambahkan data ke dalam stack, 
+    <b>pop()</b> untuk mengambil dan menghapus data terakhir, 
+    dan <b>peek()</b> untuk melihat data teratas tanpa menghapusnya.
+  </li>
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+
+
+class Stack<T> {
+  final List<T> _items = [];
+
+  void push(T value) {
+    _items.add(value);
+  }
+
+  T? pop() {
+    if (_items.isEmpty) return null;
+    return _items.removeLast();
+  }
+
+  T? peek() {
+    if (_items.isEmpty) return null;
+    return _items.last;
+  }
+}
+
+
+List<T> mergeLists<T>(List<T> a, List<T> b) {
+  return [...a, ...b];
+}
+
+
+class Response<T> {
+  T? data;
+  String? error;
+
+  Response({this.data, this.error});
+}
+
+// =======================
+// MAIN
+// =======================
+void main() {
+  // Stack
+  var stack = Stack<int>();
+  stack.push(10);
+  stack.push(20);
+  print('Peek: ${stack.peek()}');
+  print('Pop: ${stack.pop()}');
+
+  // Merge Lists
+  var result = mergeLists([1, 2], [3, 4]);
+  print('Merge: $result');
+
+  // Response
+  var res = Response<String>(data: "Berhasil");
+  print('Response: ${res.data}');
+}    
+</code></pre>
+</div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img13')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img13" class="vscode-image" src="vscode13.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode13.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    
+<!-- 14 -->
+<div class="section">
+<h2>14.Challange</h2>
+<ul>
+ <li>
+    Class <b>Product</b> digunakan sebagai contoh data objek yang memiliki atribut 
+    <b>name</b> dan <b>price</b>, serta method <b>toString()</b> untuk menampilkan data dengan format yang lebih jelas.
+  </li>
+
+</ul>    
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : M.ALGERIJA HERTYAZ PASLAM
+// NIM   : 251410021
+// Kelas : SI2A
+
+class Repository<T> {
+  final List<T> _data = [];
+
+  // tambah data
+  void add(T item) {
+    _data.add(item);
+  }
+
+  // ambil semua data
+  List<T> getAll() {
+    return _data;
+  }
+
+  // hapus data
+  void remove(T item) {
+    _data.remove(item);
+  }
+}
+
+// =======================
+// CONTOH CLASS
+// =======================
+class Product {
+  String name;
+  int price;
+
+  Product(this.name, this.price);
+
+  @override
+  String toString() {
+    return 'Product(name: $name, price: $price)';
+  }
+}
+
+// =======================
+// MAIN
+// =======================
+void main() {
+  // Repository untuk String
+  var userRepo = Repository<String>();
+  userRepo.add("Alice");
+  userRepo.add("Bob");
+
+  print("User Repo: ${userRepo.getAll()}");
+
+  // Repository untuk Product
+  var productRepo = Repository<Product>();
+  productRepo.add(Product("Laptop", 1000));
+  productRepo.add(Product("Mouse", 200));
+
+  print("Product Repo: ${productRepo.getAll()}");
+
+  // Hapus data
+  userRepo.remove("Alice");
+  print("User Repo setelah hapus: ${userRepo.getAll()}");
+}
+</code></pre>
+</div>
+    
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="toggleImage('img14')">
+           LIHAT CODE
+        </button>
+    </div>
+
+    <img id="img14" class="vscode-image" src="vscode14.png" alt="Tampilan VS Code" style="display:none;" 
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231e4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%238bc34a%22 font-size=%2220%22 font-family=%22monospace%22%3E🌿 vscode14.png TIDAK DITEMUKAN! 🌿%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23a5d6a7%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+</div>
+    <!-- SECTION 15:  -->
+<div class="section">
+    <h2> 15.KESIMPULAN </h2>
+    
+    <p><strong>✦ KESIMPULAN </strong></p>
+    <ul>
+        <li>Kesimpulan
+​Multiple inheritance adalah konsep dalam pemrograman di mana satu kelas dapat mewarisi atribut dan metode dari lebih dari satu kelas
+induk. Konsep ini memudahkan penggunaan kembali kode dan menggabungkan fungsi dari beberapa kelas,
+tetapi juga perlu digunakan dengan hati-hati agar tidak menimbulkan konflik atau kerumitan dalam program..!</li>
+    </ul>
+      </div>
+      </div>
+  <!-- SECTION 16:  -->
+<div class="section">
+    <h2> 16.PENUTUP </h2>
+    
+    <p><strong>✦ PENUTUP </strong></p>
+    <ul>
+        <li>Penutup
+​Dengan memahami multiple inheritance, kita dapat membuat program yang lebih efisien dan fleksibel
+karena satu kelas dapat memiliki fungsi dari beberapa kelas induk sekaligus. 
+Namun, penggunaannya harus tetap diperhatikan agar program tidak menjadi rumit dan sulit dipahami.!</li>
+    </ul>
+    <div class="code-box">
+
+  
+</div> <!-- penutup container -->
+</body>
+</html>
