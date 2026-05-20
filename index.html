@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiple Inheritance & Class Modifiers | Dart OOP | Ocean Breeze Theme</title>
+<title>Multiple Inheritance & Class Modifiers | Dart OOP | Citrus Orange Theme</title>
 
 <style>
 * {
@@ -17,13 +17,13 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #0a192f;
-    color: #ccd6f6;
+    background: #4a1c00;
+    color: #fff0d0;
     min-height: 100vh;
     position: relative;
 }
 
-/* BACKGROUND - OCEAN DARK BLUE */
+/* BACKGROUND - ORANGE & CITRUS */
 .cyber-bg {
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: radial-gradient(circle at 30% 20%, #0a2a4a, #051020);
+    background: radial-gradient(circle at 30% 20%, #e65100, #4a1c00);
 }
 
 .cyber-bg::before {
@@ -39,9 +39,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.08"><path fill="%2300b4d8" d="M20,50 L30,40 L40,50 L30,60 Z"/><path fill="%2390e0ef" d="M60,30 L70,20 L80,30 L70,40 Z"/><path fill="%2300b4d8" d="M70,70 L80,60 L90,70 L80,80 Z"/><circle cx="50" cy="50" r="5" fill="%2390e0ef"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.12"><path fill="%23FF8C00" d="M50,15 L61,35 L85,40 L68,58 L72,82 L50,72 L28,82 L32,58 L15,40 L39,35 Z"/><circle cx="50" cy="50" r="8" fill="%23FFA500"/><text x="50" y="55" font-size="20" text-anchor="middle" fill="%23FFD700" font-family="Arial">🍊</text></svg>');
     background-repeat: repeat;
-    background-size: 80px;
+    background-size: 70px;
     pointer-events: none;
 }
 
@@ -50,21 +50,21 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(0,180,216,0.05) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(ellipse at center, rgba(255,140,0,0.08) 0%, rgba(0,0,0,0) 70%);
     pointer-events: none;
 }
 
-/* NEON GLOW TEXT */
+/* GLOWING TEXT ANIMATION - ORANGE VERSION */
 .glitch-text {
-    animation: neonPulse 2s infinite;
+    animation: orangeGlow 2s infinite;
 }
 
-@keyframes neonPulse {
-    0%, 100% { text-shadow: 0 0 5px #00b4d8, 0 0 10px #0077b6; }
-    50% { text-shadow: 0 0 20px #90e0ef, 0 0 30px #00b4d8; }
+@keyframes orangeGlow {
+    0%, 100% { text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff6600; }
+    50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff4400; }
 }
 
-/* FALLING DIGITAL CODE */
+/* FALLING CODES - CITRUS FRUIT ICONS */
 .falling-codes {
     position: fixed;
     top: 0;
@@ -73,16 +73,16 @@ body {
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 0.35;
 }
 
 .falling-codes span {
     position: absolute;
-    color: #00b4d8;
+    color: #ffa500;
     font-family: 'Space Mono', monospace;
-    font-size: 16px;
+    font-size: 18px;
     animation: fall linear infinite;
-    filter: drop-shadow(0 0 3px #0096c7);
+    filter: drop-shadow(0 0 3px #ff6600);
 }
 
 @keyframes fall {
@@ -100,31 +100,30 @@ body {
 
 /* ========== HEADER ========== */
 .header {
-    background: rgba(10, 25, 47, 0.75);
+    background: rgba(74, 28, 0, 0.75);
     backdrop-filter: blur(12px);
     border-radius: 32px;
     padding: 50px 30px;
     text-align: center;
     margin-bottom: 30px;
-    border: 1px solid rgba(0, 180, 216, 0.4);
-    box-shadow: 0 0 30px rgba(0, 180, 216, 0.2), inset 0 0 20px rgba(144, 224, 239, 0.05);
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.3), inset 0 0 20px rgba(255, 102, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
 
 .header::before {
-    content: "</> { } [ ] # @";
+    content: "🍊 🍋 🍌 🍎 🍉 🍊 🍋 🍌";
     position: absolute;
     bottom: 5px;
     left: 0;
     width: 100%;
-    font-size: 12px;
-    color: #00b4d8;
-    opacity: 0.2;
+    font-size: 14px;
+    color: #ffa500;
+    opacity: 0.3;
     white-space: nowrap;
     animation: slideMarquee 12s linear infinite;
     pointer-events: none;
-    font-family: monospace;
 }
 
 @keyframes slideMarquee {
@@ -135,19 +134,19 @@ body {
 .header h1 {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
-    background: linear-gradient(135deg, #90e0ef, #00b4d8, #0077b6);
+    background: linear-gradient(135deg, #ffd700, #ff8c00, #ff6600);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     letter-spacing: -0.5px;
     margin: 5px 0;
-    filter: drop-shadow(0 0 15px rgba(0,180,216,0.3));
+    filter: drop-shadow(0 0 15px rgba(255,140,0,0.4));
 }
 
 .header .amp {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
     font-weight: 800;
-    background: linear-gradient(135deg, #00b4d8, #90e0ef);
+    background: linear-gradient(135deg, #ff8c00, #ffd700);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -156,10 +155,10 @@ body {
 .header-divider {
     width: 120px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #00b4d8, #90e0ef, transparent);
+    background: linear-gradient(90deg, transparent, #ff8c00, #ffd700, transparent);
     margin: 25px auto;
     border-radius: 3px;
-    box-shadow: 0 0 8px #00b4d8;
+    box-shadow: 0 0 8px #ff8c00;
 }
 
 .identity {
@@ -169,15 +168,15 @@ body {
 .identity p {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #90e0ef;
-    text-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+    color: #ffcc80;
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
     margin: 5px 0;
 }
 
 .identity p:first-child {
     font-size: 1.4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #90e0ef, #00b4d8);
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -185,40 +184,38 @@ body {
 
 /* ========== SECTION CARD ========== */
 .section {
-    background: rgba(10, 25, 47, 0.65);
+    background: rgba(74, 28, 0, 0.65);
     backdrop-filter: blur(8px);
     border-radius: 24px;
     padding: 30px;
     margin-bottom: 25px;
-    border: 1px solid rgba(0, 180, 216, 0.3);
+    border: 1px solid rgba(255, 140, 0, 0.4);
     transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     position: relative;
     overflow: hidden;
 }
 
 .section::after {
-    content: "{ }";
+    content: "🍊";
     position: absolute;
     bottom: 10px;
     right: 15px;
-    font-size: 24px;
-    opacity: 0.08;
+    font-size: 30px;
+    opacity: 0.1;
     pointer-events: none;
-    font-family: monospace;
-    color: #00b4d8;
 }
 
 .section:hover {
     transform: translateY(-5px);
-    border-color: #00b4d8;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(0, 180, 216, 0.2);
-    background: rgba(10, 25, 47, 0.85);
+    border-color: #ff8c00;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(255, 140, 0, 0.2);
+    background: rgba(74, 28, 0, 0.85);
 }
 
 .section h2 {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #90e0ef, #00b4d8);
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -227,27 +224,26 @@ body {
 }
 
 .section h2::after {
-    content: "</>";
+    content: "🍋";
     display: inline-block;
     width: auto;
     background: none;
     margin-left: 10px;
-    font-size: 1.3rem;
-    color: #00b4d8;
+    font-size: 1.5rem;
+    color: #ffa500;
     box-shadow: none;
-    font-family: monospace;
 }
 
 .section h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #90e0ef;
+    color: #ffcc80;
     margin: 20px 0 12px 0;
-    text-shadow: 0 0 5px #0077b6;
+    text-shadow: 0 0 5px #ff6600;
 }
 
 .section p {
-    color: #a8b2d1;
+    color: #ffe0b3;
     line-height: 1.7;
     margin-bottom: 15px;
     font-weight: 400;
@@ -259,20 +255,20 @@ body {
 }
 
 .section li {
-    color: #b0c4de;
+    color: #ffd699;
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
 /* ========== CODE BOX ========== */
 .code-box {
-    background: #0a1220;
+    background: #2a1000;
     border-radius: 16px;
     padding: 20px;
     margin: 20px 0;
-    border: 1px solid #00b4d8;
+    border: 1px solid #ff8c00;
     overflow-x: auto;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px rgba(0,180,216,0.15);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px rgba(255,140,0,0.15);
 }
 
 .code-box pre {
@@ -284,7 +280,7 @@ body {
 .code-box code {
     font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 13px;
-    color: #90e0ef;
+    color: #ffcc88;
     line-height: 1.6;
 }
 
@@ -311,29 +307,29 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #0077b6, #023e8a);
-    color: #90e0ef;
-    box-shadow: 0 0 8px #00b4d8;
-    border: 1px solid rgba(0, 180, 216, 0.5);
+    background: linear-gradient(135deg, #e65100, #bf360c);
+    color: #ffd700;
+    box-shadow: 0 0 10px #ff8c00;
+    border: 1px solid rgba(255, 140, 0, 0.5);
 }
 
 .btn-primary:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00b4d8, 0 4px 20px rgba(0, 180, 216, 0.4);
-    background: linear-gradient(135deg, #0096c7, #0077b6);
+    box-shadow: 0 0 20px #ffd700, 0 4px 20px rgba(255, 140, 0, 0.5);
+    background: linear-gradient(135deg, #ff8c00, #e65100);
     color: #fff;
 }
 
 .btn-secondary {
-    background: rgba(0, 180, 216, 0.1);
-    border: 1px solid #00b4d8;
-    color: #90e0ef;
+    background: rgba(255, 140, 0, 0.15);
+    border: 1px solid #ff8c00;
+    color: #ffd700;
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 180, 216, 0.25);
+    background: rgba(255, 140, 0, 0.3);
     transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0, 180, 216, 0.25);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
 }
 
 /* ========== GAMBAR ========== */
@@ -342,16 +338,16 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
-    border: 2px solid #00b4d8;
-    box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .vscode-image:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 35px rgba(0, 180, 216, 0.5);
-    border-color: #90e0ef;
+    box-shadow: 0 0 35px rgba(255, 102, 0, 0.5);
+    border-color: #ffd700;
 }
 
 /* ========== MODAL ========== */
@@ -360,7 +356,7 @@ body {
     position: fixed;
     z-index: 1000;
     inset: 0;
-    background: rgba(5, 16, 32, 0.98);
+    background: rgba(0, 0, 0, 0.98);
     backdrop-filter: blur(12px);
     cursor: pointer;
 }
@@ -378,8 +374,8 @@ body {
     max-width: 100%;
     max-height: 90vh;
     border-radius: 20px;
-    border: 3px solid #00b4d8;
-    box-shadow: 0 0 60px rgba(0, 180, 216, 0.4);
+    border: 3px solid #ff8c00;
+    box-shadow: 0 0 60px rgba(255, 140, 0, 0.4);
 }
 
 .close-modal {
@@ -387,7 +383,7 @@ body {
     right: 35px;
     top: 25px;
     font-size: 45px;
-    color: #00b4d8;
+    color: #ff8c00;
     cursor: pointer;
     transition: 0.3s;
     z-index: 1001;
@@ -395,30 +391,30 @@ body {
 
 .close-modal:hover {
     transform: scale(1.2);
-    color: #90e0ef;
-    text-shadow: 0 0 15px #00b4d8;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ff8c00;
 }
 
 /* ========== SUMMARY BOX ========== */
 .summary-box {
-    background: linear-gradient(135deg, rgba(0, 180, 216, 0.08), rgba(0, 119, 182, 0.08));
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(230, 81, 0, 0.1));
     border-radius: 24px;
     padding: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 180, 216, 0.4);
+    border: 1px solid rgba(255, 140, 0, 0.4);
     backdrop-filter: blur(4px);
 }
 
 .summary-box p {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #90e0ef;
+    color: #ffd700;
     margin-bottom: 15px;
 }
 
 .summary-box li {
-    color: #b0c4de;
+    color: #ffcc88;
 }
 
 /* ========== FOOTER ========== */
@@ -426,8 +422,8 @@ body {
     text-align: center;
     padding: 30px;
     margin-top: 40px;
-    border-top: 1px solid rgba(0, 180, 216, 0.3);
-    color: #90e0ef;
+    border-top: 1px solid rgba(255, 140, 0, 0.3);
+    color: #ffaa66;
     font-size: 0.9rem;
 }
 
@@ -441,17 +437,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a1220;
+    background: #2a1000;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    background: linear-gradient(135deg, #ff8c00, #e65100);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #90e0ef, #00b4d8);
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
 }
 
 /* ========== RESPONSIVE ========== */
@@ -475,31 +471,31 @@ body {
 }
 
 .button {
-    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    background: linear-gradient(135deg, #ff8c00, #e65100);
     border: none;
     padding: 12px 28px;
     border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
     margin: 15px 0;
-    color: #0a192f;
+    color: #4a1c00;
     font-weight: 700;
     transition: all 0.3s ease;
 }
 
 .button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00b4d8;
+    box-shadow: 0 0 20px #ff8c00;
 }
 </style>
 
 <script>
-// FALLING CODES - DIGITAL & CODE CHARACTERS
+// FALLING CODES - CITRUS FRUIT ICONS
 function createFallingCodes() {
     const container = document.querySelector('.falling-codes');
     if (!container) return;
     
-    const chars = ['</>', '{}', '[]', '()', '=>', '//', '#', '@', '&', '%', '$', '!', '?', '<>', '==', '!=', '&&', '||', '++', '--'];
+    const chars = ['🍊', '🍋', '🍌', '🍎', '🍉', '🍒', '🍑', '🍍', '🥭', '🍈', '🍓', '🍇', '🍊', '🍋', '🍌', '🍎'];
     
     for (let i = 0; i < 60; i++) {
         const span = document.createElement('span');
@@ -507,8 +503,8 @@ function createFallingCodes() {
         span.style.left = Math.random() * 100 + '%';
         span.style.animationDuration = Math.random() * 8 + 4 + 's';
         span.style.animationDelay = Math.random() * 10 + 's';
-        span.style.opacity = Math.random() * 0.4 + 0.1;
-        span.style.fontSize = Math.random() * 18 + 10 + 'px';
+        span.style.opacity = Math.random() * 0.5 + 0.1;
+        span.style.fontSize = Math.random() * 22 + 12 + 'px';
         container.appendChild(span);
     }
 }
@@ -547,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function() {
         img.addEventListener('click', () => openModal(img.id));
     });
     
-    console.log("🌊 Ocean Breeze Theme Activated - Dark Blue & Neon Cyan! 💎");
+    console.log("🍊 Citrus Orange Theme Activated - Fresh & Energetic! 🍋");
 });
 
 // CLICK OUTSIDE MODAL
@@ -626,7 +622,7 @@ void main() {
     </div>
 
     <img id="img1" class="vscode-image" src="vscode1.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode1.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode1.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
 
   
@@ -692,7 +688,7 @@ void main() {
     </div>
 
     <img id="img2" class="vscode-image" src="vscode2.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode2.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode2.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
 
   
@@ -755,7 +751,7 @@ void main() {
     </div>
 
     <img id="img3" class="vscode-image" src="vscode3.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode3.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode3.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
 
     
@@ -817,7 +813,7 @@ void main() {
     </div>
 
     <img id="img4" class="vscode-image" src="vscode4.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode4.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode4.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 5 -->
@@ -867,7 +863,7 @@ void main() {
     </div>
 
     <img id="img5" class="vscode-image" src="vscode5.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode5.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode5.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 6 -->
@@ -912,7 +908,7 @@ void main() {
     </div>
 
     <img id="img6" class="vscode-image" src="vscode6.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode6.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode6.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 7 -->
@@ -965,7 +961,7 @@ void main() {
     </div>
 
     <img id="img7" class="vscode-image" src="vscode7.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode7.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode7.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 8 -->
@@ -1005,7 +1001,7 @@ void main() {
     </div>
 
     <img id="img8" class="vscode-image" src="vscode8.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode8.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode8.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
     <!-- 9 -->
@@ -1046,7 +1042,7 @@ void main() {
     </div>
 
     <img id="img9" class="vscode-image" src="vscode9.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode9.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode9.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 10 -->
@@ -1112,7 +1108,7 @@ void main() {
     </div>
 
     <img id="img10" class="vscode-image" src="vscode10.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode10.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode10.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 11 -->
@@ -1188,7 +1184,7 @@ void main() {
     </div>
 
     <img id="img11" class="vscode-image" src="vscode11.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode11.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode11.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
     <!-- 12 -->
@@ -1257,7 +1253,7 @@ void main() {
     </div>
 
     <img id="img12" class="vscode-image" src="vscode12.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode12.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode12.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 13 -->
@@ -1338,7 +1334,7 @@ void main() {
     </div>
 
     <img id="img13" class="vscode-image" src="vscode13.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode13.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode13.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     
 <!-- 14 -->
@@ -1424,7 +1420,7 @@ void main() {
     </div>
 
     <img id="img14" class="vscode-image" src="vscode14.png" alt="Tampilan VS Code" style="display:none;" 
-         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%230a192f%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%2300b4d8%22 font-size=%2220%22 font-family=%22monospace%22%3E💎 vscode14.png TIDAK DITEMUKAN! 💎%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%2390e0ef%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
+         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%234a1c00%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 fill=%22%23ff8c00%22 font-size=%2220%22 font-family=%22monospace%22%3E🍊 vscode14.png TIDAK DITEMUKAN! 🍊%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2216%22%3EPastikan file gambar ada di folder yang sama%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 fill=%22%23ffcc80%22 font-size=%2214%22%3Edengan file HTML ini%3C/text%3E%3C/svg%3E';">
 </div>
     <!-- SECTION 15:  -->
 <div class="section">
